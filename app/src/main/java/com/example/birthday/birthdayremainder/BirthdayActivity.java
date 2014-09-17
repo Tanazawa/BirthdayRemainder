@@ -16,13 +16,16 @@ import static android.view.View.OnClickListener;
 
 public class BirthdayActivity extends Activity {
 
+    // 年、月、日、年齢
     private int year;
     private int month;
     private int day;
     private int age;
 
+    // 残り日数を表示
     private TextView dispView;
 
+    // 年齢を表示
     private TextView ageView;
 
     // デフォルトメッセージ
@@ -60,6 +63,7 @@ public class BirthdayActivity extends Activity {
                     day = dayOfMonth;
                     showResult();
 
+                    // データを保存
                     savePrefs();
                 }
             }, 1979, 6, 3).show();
